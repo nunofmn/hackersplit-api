@@ -21,7 +21,6 @@ const getTopStories = function(callback) {
 };
 
 const getItem = function(item, callback) {
-  console.log('GET ITEM: ', item);
 
   firebase.app().database()
     .ref(`v0/item/${item}`)

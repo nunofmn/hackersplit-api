@@ -31,7 +31,6 @@ const getTopStoriesIds = function(callback) {
 const getTopStoriesItems = function(max, callback) {
 
   getTopStoriesIds((err, storiesIds) => {
-
     if(err) {
       return callback(err);
     }
@@ -74,12 +73,25 @@ const getStory = function(storyId, callback) {
 
 };
 
+const updateTopStoriesCache = function(callback) {
+  client.getTopStories((err, stories) => {
+    if(err) {
+      return callback(err);
+    }
+
+    cache.putValue(TOP_STORIES_IDS_CACHE, stories);
+
+    callback();
+  });
+};
+
 const topStoriesUpdateHandler = function(err, stories) {
-  cache.putValue(TOP_STORIES_CACHE, stories);
+  cache.putValue(TOP_STORIES_IDS_CACHE, stories);
 };
 
 module.exports = {
   getTopStoriesItems,
   getTopStoriesIds,
+  updateTopStoriesCache,
   topStoriesUpdateHandler
 };
