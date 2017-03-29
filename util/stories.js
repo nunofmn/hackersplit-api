@@ -92,6 +92,7 @@ const topStoriesUpdateHandler = function(err, stories) {
 module.exports = {
   getTopStoriesItems,
   getTopStoriesIds,
+  getStory,
   updateTopStoriesCache,
   topStoriesUpdateHandler
 };
