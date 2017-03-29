@@ -1,5 +1,6 @@
 const Glue = require('glue');
 const manifest = require('./config/manifest');
+const hnClient = require('./util/hnclient');
 
 if(!process.env.PRODUCTION) {
   manifest.registrations.push({
