@@ -1,5 +1,5 @@
 const envKey = key => {
-  const env = process.env.NODE_ENV || 'development';
+  const env = process.env.NODE_ENV || 'development'
 
   const configuration = {
     development: {
@@ -16,8 +16,8 @@ const envKey = key => {
     }
   }
 
-  return configuration[env][key];
-};
+  return configuration[env][key]
+}
 
 const manifest = {
   connections: [
@@ -35,7 +35,7 @@ const manifest = {
   registrations: [
     {
       plugin: './api',
-      options: { routes: { prefix: '/api' }}
+      options: { routes: { prefix: '/api' } }
     },
     {
       plugin: {
@@ -46,7 +46,7 @@ const manifest = {
             console: [
               { module: 'good-squeeze',
                 name: 'Squeeze',
-                args: [{ error: '*'}] 
+                args: [{ error: '*' }]
               },
               {
                 module: 'good-console'
@@ -58,6 +58,6 @@ const manifest = {
       }
     }
   ]
-};
+}
 
-module.exports = manifest;
+module.exports = manifest
