@@ -1,0 +1,15 @@
+{
+  "AWSEBDockerrunVersion": 1,
+  "containerDefinitions": [
+    {
+      "name": "hackersplit-api",
+      "essential": true,
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 8000
+        }
+      ]
+    }
+  ]
+}

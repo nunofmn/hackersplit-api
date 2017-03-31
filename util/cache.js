@@ -1,5 +1,11 @@
 const redis = require('redis')
-const client = redis.createClient(process.env.REDIS_PORT)
+
+const redisOptions = {
+  host: process.env.REDIS_HOST,
+  port: parseInt(process.env.REDIS_PORT)
+}
+
+const client = redis.createClient(redisOptions)
 
 const EXPIRE_TIME = 3600 * 24 // 1 day
 

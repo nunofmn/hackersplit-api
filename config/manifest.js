@@ -3,16 +3,13 @@ const envKey = key => {
 
   const configuration = {
     development: {
-      host: 'localhost',
       port: 8000
     },
     uat: {
-      host: 'localhost',
       port: 8010
     },
     production: {
-      host: process.env.HOST,
-      port: process.env.PORT
+      port: 8000
     }
   }
 
