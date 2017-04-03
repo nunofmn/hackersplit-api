@@ -13,9 +13,9 @@ const comment = {
       })
     }
   },
-  getByStoryId: {
+  getAllComments: {
     handler: function (request, reply) {
-      comments.getCommentsItems(request.params.id, (err, comments) => {
+      comments.getAllStoryComments(request.params.id, (err, comments) => {
         if (err) {
           return reply(Boom.badImplementation('Error fetching comments content'))
         }
