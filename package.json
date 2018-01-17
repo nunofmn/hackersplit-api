@@ -23,10 +23,10 @@
     "good-squeeze": "^5.0.2",
     "hapi": "^16.1.0",
     "redis": "^2.7.1",
-    "request": "^2.81.0"
+    "request": "^2.81.0",
+    "blipp": "^2.3.0"
   },
   "devDependencies": {
-    "blipp": "^2.3.0",
     "standard": "^9.0.2"
   }
 }
