@@ -1,6 +1,6 @@
 # Hackersplit API
 > Hackersplit HTTP API used for processing and caching Hacker News articles and comments.  
-> Used by [Hackersplit](https://github.com/nunofmn/hackersplit-api) application  
+> Used by [Hackersplit](https://github.com/nunofmn/hackersplit) application.
 
 ## Installing / Getting started
 It’s necessary to get a [Mercury Web Parser](https://mercury.postlight.com/web-parser/) API token.
@@ -16,7 +16,7 @@ docker-compose up
 ### API endpoints
 * **GET** /api
 * **GET** _api_comment/{id}
-*  **GET** _api_comment/subcomments
+* **GET** _api_comment/subcomments
 * **GET** _api_story/{id}
 * **GET** _api_story_{id}_comments
 * **GET** _api_story_{id}_content
